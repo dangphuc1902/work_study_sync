@@ -1,0 +1,74 @@
+# properti
+  #spring.datasource.url=jdbc:mysql://localhost:3307/uniclub_web
+  #spring.datasource.username=root
+  #spring.datasource.password=admin123
+  #spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+  #
+  #spring.jpa.hibernate.ddl-auto=none
+
+#yaml
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/work_study_sync
+    username: root
+    password: admin123456
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  webflux:
+    multipart:
+      max-headers-size: 512KB
+      max-parts: 3
+      max-disk-usage-per-part: 1024KB
+      max-in-memory-size: 5KB
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 1011781828728-8o13btj3j3n3aute4d58g6am4eks25ti.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - openid
+              - profile
+              - email
+            redirect-uri: "{baseUrl}/author/oauth2/callback/google"
+        provider:
+          google:
+            authorization-uri: https://accounts.google.com/o/oauth2/v2/auth
+            token-uri: https://oauth2.googleapis.com/token
+            user-info-uri: https://openidconnect.googleapis.com/v1/userinfo
+            user-name-attribute: sub
+
+key:
+  token:
+    jwt: L4f3AZ3yO8nPgQtR200WkCXAypfj6juu11mRpX/7UuM=
+
+upload:
+  file:
+    path: D:\WorkSpace\Project\WorkStudySync\uploads
+
+redis:
+  port: 6378
+  url: localhost
+# logger: Ghi lịa lại lch sử thao tác
+logging:
+  level:
+    root: info
+  file:
+    name: D:\WorkSpace\Project\WorkStudySync\log\devlog.log
+  logback:
+    rollingpolicy:
+      max-file-size: 100
