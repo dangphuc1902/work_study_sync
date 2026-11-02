@@ -1,13 +1,3 @@
-Dưới đây là phiên bản **định dạng lại đẹp, rõ ràng và chuyên nghiệp** của tài liệu API bạn gửi — chuẩn Markdown, có thể dùng ngay cho **README.md** hoặc **API Docs**:
-
----
-
-# ☕ WorkStudySync API Documentation
-
-> **Backend API** cho nền tảng **WorkStudySync** – hệ thống quản lý công việc và học tập tích hợp.
-
----
-
 ## 🌍 Base URL
 
 ```
